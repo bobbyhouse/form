@@ -51,7 +51,7 @@ cd ./form
 3. Install the depdencies with NPM (Node Package Manager). We are writing code in Javascript, NodeJS is an implementation of Javascript that allows us to run Javascript outside of a web browser. `npm` is a command we can issue from the command line that knows how to interact with NodeJS projects, including installing depdencies.
 
 ```
-npm -i
+npm install .
 ```
 
 4. Now start the server
