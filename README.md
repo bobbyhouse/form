@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+With this code a user can enter data into a form, submit it, and then see the entry they create. Right now it doesn't do any of that. It is just the boilerplate code that we will start with.
 
-## Available Scripts
+## Environment Setup
+1. Request access to the Slack channel SquidJigs
+2. Send a message to @bobby requesting a username and password
+3. Use the username and password to ssh into the server located at 82.180.133.200
+4. Configure `git` which is used for "version control." Essentially, git allows you to "commit" and "push" your code changes to a remote server so that it can be "pulled" down by another user. Git is how we share code.
 
-In the project directory, you can run:
+```
+git config --global --edit
+```
 
-### `npm start`
+5. Create an ssh key that you will use to authenticate to GitHub. GitHub is a service that provides us with a Git server. We will share all of our code with each other on GitHub using the command line tool Git.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Issue the following command in the terminal. Hit return and accept all the defaults, including "no passphrase"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+cd ~
+ssh-keygen -t rsa
+```
 
-### `npm test`
+Copy the contents of your public key file (`~/.ssh/id_rsa.pub`). The following command will print the contents to your screen. Select the contents with your mouse cursor and copy it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+cat ~/.ssh/id_rsa.pub
+```
 
-### `npm run build`
+6. Create an account at github.com
+7. Add your public key to GitHub
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+From the GitHub website, click on your user avatar in the upper right-hand corner. Select "Settings." Then from the left-side navigation select "SSH and GPG Keys." Click "New SSH Key." You can add any title, and then paste the contents you copied to your clipboard to the textbox with the label "Key" and save your changes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+8. Your GitHub account should now be setup. Send a message to @bobby in the SquidJigs Slack channel with your GitHub username so that you can be added as a collaborator to the project. Once you're added as a collaborator you can pull down the code that is in this "git repository."
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Cloning the Repository and Starting the server
+1. In your "home" directory, identified by the symbol "~", clone the form project with the following commands:
 
-### `npm run eject`
+```
+cd ~
+git clone git@github.com:bobbyhouse/form.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Git will create a directory called "form." Change into this directory with the following command:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+cd ./form
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install the depdencies with NPM (Node Package Manager). We are writing code in Javascript, NodeJS is an implementation of Javascript that allows us to run Javascript outside of a web browser. `npm` is a command we can issue from the command line that knows how to interact with NodeJS projects, including installing depdencies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm -i
+```
 
-## Learn More
+4. Now start the server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Open the project in your browser: http://82.180.133.200:3000. You should see that spinning radioactive symbol. You're all done. This is the least fun part of any project. Should be more fun from here on out.
