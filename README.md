@@ -64,6 +64,17 @@ npm start
 
 ## Code Projects
 ### Create a form
+1. SSH into the remote server `ssh <your username>@82.180.133.200`
+2. Change into the directory containing our project `cd form`
+3. Start the webpack development server `npm start`
+2. Go back to your machine and open Virtual Studio (Free)
+3. Add the remote server, and connect to it.
+4. Go to Explorder and Open Folder "form"
+5. Open `form/src/App.js` in your editor
+6. What we see here is
+* Javascript `function` named `App` that "returns" JSX. JSX is the React version of HTML.
+* `import` and `export` are keywords that allow us to pull in code, either ours or someone elses, and export makes it so that our code can be used elsewhere with the `import` command.
+* Special "webpack" imports that imports an SVG file and CSS
 ### Integrate with an API
 ### CR of CRUD (Create and Read)
 ### UD of CRUD (Update and Delete)
