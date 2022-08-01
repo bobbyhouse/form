@@ -69,12 +69,19 @@ npm start
 3. Start the webpack development server `npm start`
 2. Go back to your machine and open Virtual Studio (Free)
 3. Add the remote server, and connect to it.
-4. Go to Explorder and Open Folder "form"
+4. Go to file explorer and select "Open Folder" and then open "form"
 5. Open `form/src/App.js` in your editor
-6. What we see here is
-* Javascript `function` named `App` that "returns" JSX. JSX is the React version of HTML.
-* `import` and `export` are keywords that allow us to pull in code, either ours or someone elses, and export makes it so that our code can be used elsewhere with the `import` command.
-* Special "webpack" imports that imports an SVG file and CSS
+7. Remove all the JSX contained within `<header>` and replace it with `form`, `label`, `input`, and `button`
+8. Update form label to be `display: block` and color to white (`#ffffff`).
+9. Add an import for React and `useState`
+10. Call `useState` initializing it with null, and savings it's output into `name` and `setName`
+11. Create a function that can receive the `onChange` event from input, and store the value from the event into the variable named `name` with the `setName` function, i.e., `setName(e.target.value)`.
+13. Create a function that can receive the `onSubmit` event from form, prevent the default behavior, and "print" the contents of the `name` variable. 
+```
+e.preventDefault();
+console.log(name);
+```
+14. Update `App.css` to make the background white (i.e., `#ffffff`)
 ### Integrate with an API
 ### CR of CRUD (Create and Read)
 ### UD of CRUD (Update and Delete)
