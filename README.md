@@ -61,3 +61,9 @@ npm start
 ```
 
 5. Open the project in your browser: http://82.180.133.200:3000. You should see that spinning radioactive symbol. You're all done. This is the least fun part of any project. Should be more fun from here on out.
+
+## Code Projects
+### Create a form
+### Integrate with an API
+### CR of CRUD (Create and Read)
+### UD of CRUD (Update and Delete)
