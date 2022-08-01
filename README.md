@@ -72,7 +72,7 @@ npm start
 4. Go to file explorer and select "Open Folder" and then open "form"
 5. Open `form/src/App.js` in your editor
 7. Remove all the JSX contained within `<header>` and replace it with `form`, `label`, `input`, and `button`
-8. Update form label to be `display: block` and color to white (`#ffffff`).
+8. Update form label to be `display: block` and color to black.
 9. Add an import for React and `useState`
 10. Call `useState` initializing it with null, and savings it's output into `name` and `setName`
 11. Create a function that can receive the `onChange` event from input, and store the value from the event into the variable named `name` with the `setName` function, i.e., `setName(e.target.value)`.
