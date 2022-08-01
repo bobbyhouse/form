@@ -67,7 +67,7 @@ npm start
 1. SSH into the remote server `ssh <your username>@82.180.133.200`
 2. Change into the directory containing our project `cd form`
 3. Start the webpack development server `npm start`
-2. Go back to your machine and open Virtual Studio (Free)
+2. Go back to your machine and open Visual Studio (Visual Studio is free).
 3. Add the remote server, and connect to it.
 4. Go to file explorer and select "Open Folder" and then open "form"
 5. Open `form/src/App.js` in your editor
